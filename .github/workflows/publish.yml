@@ -15,6 +15,11 @@ on:
           - patch
           - minor
           - major
+      dry_run:
+        description: 'Dry run (test without publishing)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   publish:
@@ -43,7 +48,18 @@ jobs:
           git push origin HEAD:${{ github.ref_name }}
           git push --tags
 
+      - name: Test NPM Access (dry run)
+        if: github.event.inputs.dry_run == 'true'
+        run: |
+          echo "🧪 Dry run mode - testing NPM access..."
+          npm whoami
+          npm pack --dry-run
+          echo "✅ NPM token works and package is valid"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Publish to NPM
+        if: github.event.inputs.dry_run != 'true'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

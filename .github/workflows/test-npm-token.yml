@@ -1,0 +1,31 @@
+name: Test NPM Token
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-token:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Test NPM Token Access
+        run: |
+          echo "Testing NPM token access..."
+          npm whoami
+          echo "✅ NPM token is valid and accessible"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Validate Package
+        run: |
+          echo "Testing package validation..."
+          npm pack --dry-run
+          echo "✅ Package structure is valid"
