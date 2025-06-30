@@ -51,3 +51,11 @@ test-output/
 # Temporary files
 tmp/
 temp/
+
+# Claude AI files
+.claude/
+
+# Test files
+test.md
+long-test.md
+*.tgz
