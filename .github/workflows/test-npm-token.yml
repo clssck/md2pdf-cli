@@ -17,19 +17,22 @@ jobs:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Debug Token and Configure NPM Authentication
+      - name: Debug Token and Fix NPM Authentication
         run: |
           echo "🔍 Debugging NPM token configuration..."
           echo "Token exists: ${{ secrets.NPM_TOKEN != '' }}"
           echo "Token starts with npm_: $(echo '${{ secrets.NPM_TOKEN }}' | grep -q '^npm_' && echo 'true' || echo 'false')"
           echo "Token length: $(echo '${{ secrets.NPM_TOKEN }}' | wc -c)"
           
-          echo "📝 Configuring .npmrc..."
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-          echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
+          echo "📝 Current npmrc location: $NPM_CONFIG_USERCONFIG"
+          echo "📋 Current .npmrc contents:"
+          cat "$NPM_CONFIG_USERCONFIG" | sed 's/npm_[a-zA-Z0-9]*/npm_[REDACTED]/g' || echo "No .npmrc found"
           
-          echo "📋 .npmrc contents:"
-          cat ~/.npmrc | sed 's/npm_[a-zA-Z0-9]*/npm_[REDACTED]/g'
+          echo "🔧 Fixing .npmrc authentication..."
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$NPM_CONFIG_USERCONFIG"
+          
+          echo "📋 Updated .npmrc contents:"
+          cat "$NPM_CONFIG_USERCONFIG" | sed 's/npm_[a-zA-Z0-9]*/npm_[REDACTED]/g'
 
       - name: Test NPM Token Access
         run: |
