@@ -16,12 +16,12 @@ A powerful command-line tool to convert Markdown files to beautifully formatted 
 
 ### Global Installation (Recommended)
 ```bash
-npm install -g md2pdf-cli
+npm install -g markdown-to-pdf-cli
 ```
 
 ### Local Installation
 ```bash
-npm install md2pdf-cli
+npm install markdown-to-pdf-cli
 npx md2pdf --help
 ```
 

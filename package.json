@@ -1,5 +1,5 @@
 {
-  "name": "md2pdf-cli",
+  "name": "markdown-to-pdf-cli",
   "version": "1.0.0",
   "description": "Convert Markdown files to PDF with Mermaid diagram support",
   "main": "markdown_to_pdf.js",
@@ -34,10 +34,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/md2pdf-cli.git"
+    "url": "https://github.com/clssck/md2pdf-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/md2pdf-cli/issues"
+    "url": "https://github.com/clssck/md2pdf-cli/issues"
   },
-  "homepage": "https://github.com/yourusername/md2pdf-cli#readme"
+  "homepage": "https://github.com/clssck/md2pdf-cli#readme"
 }
