@@ -1,0 +1,64 @@
+{
+  "name": "academic",
+  "description": "Academic paper style with serif fonts",
+  "font": {
+    "family": "Georgia, 'Times New Roman', Times, serif",
+    "size": "12pt",
+    "lineHeight": 1.8
+  },
+  "colors": {
+    "primary": "#1a1a1a",
+    "secondary": "#2c5aa0",
+    "text": "#1a1a1a", 
+    "background": "#ffffff",
+    "border": "#cccccc",
+    "code": "#f5f5f5",
+    "codeText": "#333333",
+    "blockquote": "#666666",
+    "blockquoteBorder": "#cccccc"
+  },
+  "spacing": {
+    "headingMargin": "32px 0 16px 0",
+    "paragraphMargin": "0 0 18px 0",
+    "listMargin": "0 0 18px 0"
+  },
+  "headings": {
+    "h1": {
+      "fontSize": "2.2em",
+      "fontWeight": "700",
+      "textAlign": "center",
+      "marginBottom": "32px",
+      "fontFamily": "Georgia, serif"
+    },
+    "h2": {
+      "fontSize": "1.6em",
+      "fontWeight": "600",
+      "marginTop": "32px",
+      "fontFamily": "Georgia, serif"
+    },
+    "h3": {
+      "fontSize": "1.3em",
+      "fontWeight": "600",
+      "fontFamily": "Georgia, serif"
+    },
+    "h4": {
+      "fontSize": "1.1em",
+      "fontWeight": "600",
+      "fontStyle": "italic",
+      "fontFamily": "Georgia, serif"
+    },
+    "h5": {
+      "fontSize": "1em",
+      "fontWeight": "600",
+      "fontFamily": "Georgia, serif"
+    },
+    "h6": {
+      "fontSize": "0.9em",
+      "fontWeight": "600",
+      "color": "#666666",
+      "textTransform": "uppercase",
+      "letterSpacing": "0.5px",
+      "fontFamily": "Georgia, serif"
+    }
+  }
+}

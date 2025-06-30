@@ -1,0 +1,70 @@
+{
+  "name": "corporate",
+  "description": "Professional corporate document style",
+  "font": {
+    "family": "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    "size": "11pt",
+    "lineHeight": 1.5
+  },
+  "colors": {
+    "primary": "#1e3a8a",
+    "secondary": "#3b82f6",
+    "text": "#1f2937",
+    "background": "#ffffff",
+    "border": "#e5e7eb",
+    "code": "#f3f4f6",
+    "codeText": "#374151",
+    "blockquote": "#6b7280",
+    "blockquoteBorder": "#3b82f6",
+    "accent": "#f59e0b"
+  },
+  "spacing": {
+    "headingMargin": "28px 0 14px 0",
+    "paragraphMargin": "0 0 14px 0",
+    "listMargin": "0 0 14px 0"
+  },
+  "headings": {
+    "h1": {
+      "fontSize": "2.5em",
+      "fontWeight": "700",
+      "color": "#1e3a8a",
+      "borderBottom": "3px solid #3b82f6",
+      "paddingBottom": "0.5em",
+      "textTransform": "uppercase",
+      "letterSpacing": "1px"
+    },
+    "h2": {
+      "fontSize": "1.8em",
+      "fontWeight": "600",
+      "color": "#1e3a8a",
+      "borderLeft": "4px solid #3b82f6",
+      "paddingLeft": "16px"
+    },
+    "h3": {
+      "fontSize": "1.4em",
+      "fontWeight": "600",
+      "color": "#1f2937",
+      "borderBottom": "1px solid #e5e7eb",
+      "paddingBottom": "0.3em"
+    },
+    "h4": {
+      "fontSize": "1.2em",
+      "fontWeight": "600",
+      "color": "#374151"
+    },
+    "h5": {
+      "fontSize": "1em",
+      "fontWeight": "600",
+      "color": "#374151",
+      "textTransform": "uppercase",
+      "letterSpacing": "0.5px"
+    },
+    "h6": {
+      "fontSize": "0.9em",
+      "fontWeight": "600",
+      "color": "#6b7280",
+      "textTransform": "uppercase",
+      "letterSpacing": "0.5px"
+    }
+  }
+}

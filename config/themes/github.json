@@ -1,0 +1,56 @@
+{
+  "name": "github",
+  "description": "GitHub-inspired clean theme",
+  "font": {
+    "family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif",
+    "size": "11pt",
+    "lineHeight": 1.6
+  },
+  "colors": {
+    "primary": "#0d1117",
+    "secondary": "#0969da", 
+    "text": "#24292f",
+    "background": "#ffffff",
+    "border": "#d0d7de",
+    "code": "#f6f8fa",
+    "codeText": "#24292f",
+    "blockquote": "#656d76",
+    "blockquoteBorder": "#d0d7de"
+  },
+  "spacing": {
+    "headingMargin": "24px 0 16px 0",
+    "paragraphMargin": "0 0 16px 0",
+    "listMargin": "0 0 16px 0"
+  },
+  "headings": {
+    "h1": {
+      "fontSize": "2em",
+      "fontWeight": "600",
+      "borderBottom": "1px solid #d0d7de",
+      "paddingBottom": "0.3em"
+    },
+    "h2": {
+      "fontSize": "1.5em", 
+      "fontWeight": "600",
+      "borderBottom": "1px solid #d0d7de",
+      "paddingBottom": "0.3em"
+    },
+    "h3": {
+      "fontSize": "1.25em",
+      "fontWeight": "600"
+    },
+    "h4": {
+      "fontSize": "1em",
+      "fontWeight": "600"
+    },
+    "h5": {
+      "fontSize": "0.875em",
+      "fontWeight": "600"
+    },
+    "h6": {
+      "fontSize": "0.85em",
+      "fontWeight": "600",
+      "color": "#656d76"
+    }
+  }
+}

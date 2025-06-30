@@ -1,0 +1,22 @@
+{
+  "theme": {
+    "name": "github"
+  },
+  "document": {
+    "title": "My Document",
+    "author": "Your Name"
+  },
+  "footer": {
+    "enabled": true,
+    "content": {
+      "left": "{{document.author}}",
+      "center": "",
+      "right": "Page {{pageNumber}} of {{totalPages}}"
+    }
+  },
+  "toc": {
+    "enabled": true,
+    "title": "Table of Contents",
+    "maxDepth": 3
+  }
+}

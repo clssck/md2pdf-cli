@@ -1,0 +1,92 @@
+{
+  "$schema": "./schema.json",
+  "document": {
+    "title": "",
+    "author": "",
+    "subject": "",
+    "keywords": [],
+    "language": "en"
+  },
+  "page": {
+    "format": "A4",
+    "width": "210mm",
+    "height": "auto",
+    "margins": {
+      "top": "20mm",
+      "right": "20mm", 
+      "bottom": "20mm",
+      "left": "20mm"
+    },
+    "orientation": "portrait"
+  },
+  "theme": {
+    "name": "default",
+    "font": {
+      "family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "size": "11pt",
+      "lineHeight": 1.6
+    },
+    "colors": {
+      "primary": "#2c3e50",
+      "secondary": "#3498db",
+      "text": "#333333",
+      "background": "#ffffff",
+      "border": "#e1e1e1",
+      "code": "#f8f8f8"
+    }
+  },
+  "header": {
+    "enabled": false,
+    "content": {
+      "left": "",
+      "center": "",
+      "right": ""
+    },
+    "fontSize": "9pt",
+    "margin": "10mm"
+  },
+  "footer": {
+    "enabled": false,
+    "content": {
+      "left": "{{author}}",
+      "center": "",
+      "right": "Page {{pageNumber}} of {{totalPages}}"
+    },
+    "fontSize": "9pt",
+    "margin": "10mm"
+  },
+  "toc": {
+    "enabled": false,
+    "title": "Table of Contents",
+    "maxDepth": 3,
+    "pageBreak": true
+  },
+  "coverPage": {
+    "enabled": false,
+    "template": "default",
+    "title": "{{document.title}}",
+    "subtitle": "",
+    "author": "{{document.author}}",
+    "date": "{{date}}",
+    "logo": ""
+  },
+  "mermaid": {
+    "theme": "default",
+    "backgroundColor": "#ffffff",
+    "fontSize": "16px",
+    "fontFamily": "Arial, sans-serif"
+  },
+  "code": {
+    "lineNumbers": false,
+    "highlightTheme": "default",
+    "fontSize": "0.9em",
+    "fontFamily": "'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace"
+  },
+  "output": {
+    "printBackground": true,
+    "displayHeaderFooter": true,
+    "preferCSSPageSize": true,
+    "omitBackground": false,
+    "timeout": 30000
+  }
+}
