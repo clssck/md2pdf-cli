@@ -40,7 +40,7 @@ jobs:
       - name: Configure NPM Authentication
         run: |
           echo "🔧 Configuring NPM authentication..."
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$NPM_CONFIG_USERCONFIG"
+          sed -i "s|\${NODE_AUTH_TOKEN}|${{ secrets.NPM_TOKEN }}|g" "$NPM_CONFIG_USERCONFIG"
 
       - name: Install dependencies
         run: npm ci

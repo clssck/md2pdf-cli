@@ -29,7 +29,7 @@ jobs:
           cat "$NPM_CONFIG_USERCONFIG" | sed 's/npm_[a-zA-Z0-9]*/npm_[REDACTED]/g' || echo "No .npmrc found"
           
           echo "🔧 Fixing .npmrc authentication..."
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$NPM_CONFIG_USERCONFIG"
+          sed -i "s|\${NODE_AUTH_TOKEN}|${{ secrets.NPM_TOKEN }}|g" "$NPM_CONFIG_USERCONFIG"
           
           echo "📋 Updated .npmrc contents:"
           cat "$NPM_CONFIG_USERCONFIG" | sed 's/npm_[a-zA-Z0-9]*/npm_[REDACTED]/g'
