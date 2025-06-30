@@ -24,6 +24,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: NPM_KEY
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

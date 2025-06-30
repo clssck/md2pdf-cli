@@ -6,6 +6,7 @@ on:
 jobs:
   test-token:
     runs-on: ubuntu-latest
+    environment: NPM_KEY
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
