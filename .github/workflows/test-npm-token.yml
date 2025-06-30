@@ -17,14 +17,23 @@ jobs:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Configure NPM Authentication
+      - name: Debug Token and Configure NPM Authentication
         run: |
+          echo "🔍 Debugging NPM token configuration..."
+          echo "Token exists: ${{ secrets.NPM_TOKEN != '' }}"
+          echo "Token starts with npm_: $(echo '${{ secrets.NPM_TOKEN }}' | grep -q '^npm_' && echo 'true' || echo 'false')"
+          echo "Token length: $(echo '${{ secrets.NPM_TOKEN }}' | wc -c)"
+          
+          echo "📝 Configuring .npmrc..."
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
+          
+          echo "📋 .npmrc contents:"
+          cat ~/.npmrc | sed 's/npm_[a-zA-Z0-9]*/npm_[REDACTED]/g'
 
       - name: Test NPM Token Access
         run: |
-          echo "Testing NPM token access..."
+          echo "🧪 Testing NPM token access..."
           npm whoami
           echo "✅ NPM token is valid and accessible"
 
